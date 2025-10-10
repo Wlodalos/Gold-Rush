@@ -16,7 +16,6 @@ public class Main {
         board.placeToken(1, 1, Token.GOLD);
         Player player = new Player("Bartek", 2, 2);
         player.placeOnBoard(board);
-
         board.display();
 
         System.out.println("Gracz rusza sie w gore:");
@@ -30,5 +29,6 @@ public class Main {
         System.out.println("Gracz rusza sie w gore:");
         player.move(-1, 0, board);
         board.display();
+
     }
 }
