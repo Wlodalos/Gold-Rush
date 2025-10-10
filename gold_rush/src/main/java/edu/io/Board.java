@@ -13,7 +13,7 @@ public class Board {
     public void clean() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                grid[i][j] = new Token(".");
+                grid[i][j] = Token.EMPTY;
             }
         }
     }
@@ -32,7 +32,7 @@ public class Board {
     public void display() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.printf("%-2s", grid[i][j].label);
+                System.out.printf("%-3s", grid[i][j].toString());
             }
             System.out.println();
         }
