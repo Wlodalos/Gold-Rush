@@ -26,7 +26,7 @@ public class Main {
         player.move(0, -1, board);
         board.display();
 
-        System.out.println("Gracz rusza sie w gore:");
+        System.out.println("Gracz rusza sie w gore: ");
         player.move(-1, 0, board);
         board.display();
 
