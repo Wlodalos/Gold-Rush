@@ -3,10 +3,6 @@ package edu.io;
 public class Token {
     public final String label;
 
-    public static final Token EMPTY = new Token("\u30FB");
-    public static final Token GOLD = new Token("\uD83D\uDCB0");
-    public static final Token PLAYER = new Token("\uC6C3");
-
     public Token(String label) {
         this.label = label;
     }
@@ -15,4 +11,8 @@ public class Token {
     public String toString() {
         return label;
     }
+
+    public static final Token EMPTY = new Token("・");
+    public static final Token PLAYER = new Token("웃");
+    public static final Token GOLD = new Token("💰︎");
 }
