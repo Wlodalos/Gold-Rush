@@ -8,6 +8,8 @@ public class Board {
     private final Token[][] grid;
     private static final int DEFAULT_SIZE = 8;
 
+    public record Coords(int col, int row) {}
+
     public Board() {
         this(DEFAULT_SIZE);
     }

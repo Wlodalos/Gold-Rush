@@ -7,12 +7,9 @@ public class PlayerToken extends Token {
     private int col;
     private int row;
 
-    public record Position(int col, int row) {}
-
     public enum Move {
         NONE, UP, DOWN, LEFT, RIGHT
     }
-
 
     public PlayerToken(Board board) {
         this(board, board.size() / 2, board.size() / 2);
@@ -51,7 +48,7 @@ public class PlayerToken extends Token {
         board.placeToken(this.col, this.row, this);
     }
 
-    public Position pos() {
-        return new Position(col, row);
+    public Board.Coords pos() {
+        return new Board.Coords(col, row);
     }
 }

@@ -38,12 +38,7 @@ class BoardTest {
 
     @Test
     void display_method_exists() {
-        try {
-            Board.class.getMethod("display");
-        }
-        catch (Exception e) {
-            Assertions.fail();
-        }
+        Assertions.assertDoesNotThrow(() -> Board.class.getMethod("display"));
     }
 
     // -- utils

@@ -17,7 +17,7 @@ class PlayerTest {
 
     @Test
     void new_PlayerToken_is_placed_on_the_board() {
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         Assertions.assertEquals(token, board.peekToken(pos.col(), pos.row()));
     }
 
@@ -26,7 +26,7 @@ class PlayerTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             while (true) token.move(PlayerToken.Move.LEFT);
         });
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         Assertions.assertEquals(0, pos.col());
     }
     @Test
@@ -34,7 +34,7 @@ class PlayerTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             while (true) token.move(PlayerToken.Move.RIGHT);
         });
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         Assertions.assertEquals(board.size()-1, pos.col());
     }
     @Test
@@ -42,7 +42,7 @@ class PlayerTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             while (true) token.move(PlayerToken.Move.UP);
         });
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         Assertions.assertEquals(0, pos.row());
     }
     @Test
@@ -50,13 +50,13 @@ class PlayerTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             while (true) token.move(PlayerToken.Move.DOWN);
         });
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         Assertions.assertEquals(board.size()-1, pos.row());
     }
 
     @Test
     void move_moves_token() {
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         token.move(PlayerToken.Move.DOWN);
         Assertions.assertEquals(
                 token,
@@ -65,7 +65,7 @@ class PlayerTest {
 
     @Test
     void after_move_prev_square_is_empty() {
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         token.move(PlayerToken.Move.RIGHT);
         Assertions.assertInstanceOf(
                 EmptyToken.class,
@@ -74,7 +74,7 @@ class PlayerTest {
 
     @Test
     void Move_NONE_doesnt_move_token() {
-        PlayerToken.Position pos = token.pos();
+        Board.Coords pos = token.pos();
         token.move(PlayerToken.Move.NONE);
         Assertions.assertEquals(pos, token.pos());
     }
