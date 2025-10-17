@@ -1,39 +1,59 @@
 package edu.io;
 
+import edu.io.token.EmptyToken;
+import edu.io.token.Token;
+
 public class Board {
-    public final int size = 8;
+    private final int size;
     private final Token[][] grid;
+    private static final int DEFAULT_SIZE = 8;
 
     public Board() {
-        grid = new Token[size][size];
+        this(DEFAULT_SIZE);
+    }
+
+    public Board(int size) {
+        this.size = size;
+        this.grid = new Token[size][size];
         clean();
     }
 
-    public void clean() {
-        for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                grid[x][y] = new Token("・");
+    public int size() {
+        return size;
+    }
+
+    public final void clean() {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                grid[i][j] = new EmptyToken();
             }
         }
     }
 
-    public boolean placeToken(int x, int y, Token token) {
-        if (x < 0 || y < 0 || x >= size || y >= size) return false;
-        grid[x][y] = token;
-        return true;
+    public void placeToken(int col, int row, Token token) {
+        if (isValidPosition(col, row)) {
+            grid[row][col] = token;
+        }
     }
 
-    public Token square(int x, int y) {
-        if (x < 0 || y < 0 || x >= size || y >= size) return null;
-        return grid[x][y];
+    public Token peekToken(int col, int row) {
+        if (isValidPosition(col, row)) {
+            return grid[row][col];
+        }
+        return null;
     }
 
     public void display() {
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x < size; x++) {
-                System.out.print(grid[x][y].label);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(grid[i][j].label() + "  ");
             }
             System.out.println();
         }
+        System.out.println();
+    }
+
+    public boolean isValidPosition(int col, int row) {
+        return col >= 0 && col < size && row >= 0 && row < size;
     }
 }
