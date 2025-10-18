@@ -16,7 +16,7 @@ public class Main {
         board.placeToken(0, 1, new Token("💰︎"));
         board.placeToken(1, 1, new Token("💰︎"));
 
-        Player player = new Player("Bartek", 2, 2);
+        Player player = new Player("Bartekl", 2, 2);
         player.placeOnBoard(board);
 
         board.display();
