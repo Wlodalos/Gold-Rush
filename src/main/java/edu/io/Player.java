@@ -1,48 +1,50 @@
 package edu.io;
 
+import edu.io.token.GoldToken;
+import edu.io.token.PlayerToken;
+import edu.io.token.Token;
+
 public class Player {
-    private final String name;
-    private int x;
-    private int y;
-    private int gold;
+    private PlayerToken token;
+    private double gold;
 
-    public Player(String name, int startX, int startY) {
-        this.name = name;
-        this.x = startX;
-        this.y = startY;
-        this.gold = 0;
+    public Player() {
+        this.gold = 0.0;
     }
 
-    public void placeOnBoard(Board board) {
-        board.placeToken(x, y, new Token("웃"));
+    public void assignToken(PlayerToken token) {
+        this.token = token;
     }
 
-    public void move(int dx, int dy, Board board) {
-        int newX = x + dx;
-        int newY = y + dy;
-
-        if (newX < 0 || newY < 0 || newX >= board.size || newY >= board.size) {
-            System.out.println("Nie mozna wyjsc poza plansze!");
-            return;
-        }
-
-        Token target = board.square(newX, newY);
-        if (target != null && "💰︎".equals(target.label)) {
-            gold++;
-            System.out.println(name + " znalazl zloto! 💰 (" + gold + ")");
-        }
-
-        board.placeToken(x, y, new Token("・"));
-        x = newX;
-        y = newY;
-        board.placeToken(x, y, new Token("웃"));
+    public PlayerToken token() {
+        return token;
     }
 
-    public int getGold() {
+    public double gold() {
         return gold;
     }
 
-    public String getName() {
-        return name;
+    public void gainGold(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Cannot gain negative amount of gold");
+        }
+        this.gold += amount;
+    }
+
+    public void loseGold(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Cannot lose negative amount of gold");
+        }
+        if (this.gold - amount < 0) {
+            throw new IllegalArgumentException("Cannot lose more gold than you have");
+        }
+        this.gold -= amount;
+    }
+
+    public void interactWithToken(Token token) {
+        if (token instanceof GoldToken goldToken) {
+            System.out.println("GOLD!");
+            gainGold(goldToken.amount());
+        }
     }
 }
