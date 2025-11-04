@@ -1,5 +1,7 @@
 package edu.io;
 
+import edu.io.player.Player;
+
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 

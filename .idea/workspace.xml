@@ -5,23 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e684f649-f045-4f9b-815d-75e64b1dfc09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/EmptyToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/GoldToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/Label.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PlayerToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PyriteToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GoldTokenTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PlayerTokenTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Gold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/NoTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Repairable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Shed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Tool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/AnvilToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PickaxeToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/AnvilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GoldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PickaxeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/gold_rush.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/gold_rush.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/token/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/token/PlayerToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PlayerToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GoldTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GoldTokenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTokenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TokenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +41,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,31 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.BoardTest.executor": "Run",
-    "Gradle.GameTest.executor": "Run",
-    "Gradle.Gold-Rush [:edu.io.Main.main()].executor": "Run",
-    "Gradle.GoldTokenTest.executor": "Run",
-    "Gradle.PlayerTest.executor": "Run",
-    "Gradle.PlayerTokenTest.executor": "Run",
-    "Gradle.TokenTest.executor": "Run",
-    "Gradle.gold_rushTODZIALA [:edu.io.Main.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/barte/Desktop/Nauka/semestr 3/inzyneria oprogramowania laboratorium/Gold-Rush",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AnvilTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BoardTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GameTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Gold-Rush [:edu.io.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GoldTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GoldTokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PickaxeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PlayerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PlayerTokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShedTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.gold_rushTODZIALA [:edu.io.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/barte/Desktop/Nauka/semestr 3/inzyneria oprogramowania laboratorium/Gold-Rush&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -102,6 +121,9 @@
       <workItem from="1760798062704" duration="1341000" />
       <workItem from="1760801060546" duration="291000" />
       <workItem from="1760801411622" duration="723000" />
+      <workItem from="1762043899050" duration="2245000" />
+      <workItem from="1762248007196" duration="110000" />
+      <workItem from="1762273116497" duration="639000" />
     </task>
     <servers />
   </component>

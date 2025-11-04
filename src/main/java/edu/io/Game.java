@@ -1,7 +1,11 @@
 package edu.io;
 
+import edu.io.player.Player;
+import edu.io.token.AnvilToken;
 import edu.io.token.GoldToken;
+import edu.io.token.PickaxeToken;
 import edu.io.token.PlayerToken;
+
 import java.util.Scanner;
 
 public class Game {
@@ -12,6 +16,8 @@ public class Game {
         this.board = new Board();
         board.placeToken(3, 3, new GoldToken(5.0));
         board.placeToken(6, 1, new GoldToken());
+        board.placeToken(2, 2, new PickaxeToken());
+        board.placeToken(5, 5, new AnvilToken());
     }
 
     public void join(Player player) {
@@ -27,7 +33,7 @@ public class Game {
 
         while (true) {
             board.display();
-            System.out.println("Posiadane złoto: " + player.gold());
+            System.out.println("Posiadane złoto: " + player.gold.amount());
             System.out.print("Wprowadź ruch (W/A/S/D) lub Q aby zakończyć: ");
             command = scanner.nextLine().toUpperCase();
 
@@ -43,14 +49,11 @@ public class Game {
                     case "D": playerToken.move(PlayerToken.Move.RIGHT); break;
                     default: System.out.println("Nieprawidłowa komenda!");
                 }
-            } catch (IllegalArgumentException e) {
+            } catch (IllegalArgumentException | IllegalStateException e) {
                 System.out.println("Błąd: " + e.getMessage());
-            } catch (IllegalStateException e) {
-                System.out.println("Błąd: " + e.getMessage());
-                break;
             }
         }
         scanner.close();
-        System.out.println("Koniec gry. Zebrano łącznie: " + player.gold() + " złota.");
+        System.out.println("Koniec gry. Zebrano łącznie: " + player.gold.amount() + " złota.");
     }
 }

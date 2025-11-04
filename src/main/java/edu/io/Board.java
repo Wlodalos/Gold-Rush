@@ -45,7 +45,6 @@ public class Board {
         return null;
     }
 
-
     public Board.Coords getAvailableSquare() {
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
