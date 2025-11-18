@@ -5,32 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e684f649-f045-4f9b-815d-75e64b1dfc09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Gold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/NoTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Repairable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Shed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Tool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/AnvilToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PickaxeToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AnvilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GoldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PickaxeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gold_rush.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/gold_rush.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Vitals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/VitalsValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/WaterToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/VitalsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WaterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/token/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/token/PickaxeToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PickaxeToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/io/token/PlayerToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/io/token/PlayerToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GoldTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GoldTokenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTokenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TokenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

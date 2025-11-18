@@ -2,6 +2,7 @@ package edu.io.token;
 
 import edu.io.Board;
 import edu.io.player.Player;
+import java.util.Objects;
 
 public class PlayerToken extends Token {
     private final Player player;
@@ -15,8 +16,8 @@ public class PlayerToken extends Token {
 
     public PlayerToken(Player player, Board board) {
         super(Label.PLAYER_TOKEN_LABEL);
-        this.player = player;
-        this.board = board;
+        this.player = Objects.requireNonNull(player);
+        this.board = Objects.requireNonNull(board);
 
         Board.Coords startPos = board.getAvailableSquare();
         this.col = startPos.col();
@@ -26,6 +27,7 @@ public class PlayerToken extends Token {
     }
 
     public void move(Move dir) {
+        Objects.requireNonNull(dir);
         if (dir == Move.NONE) {
             return;
         }

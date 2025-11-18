@@ -2,6 +2,7 @@ package edu.io;
 
 import edu.io.token.EmptyToken;
 import edu.io.token.Token;
+import java.util.Objects;
 
 public class Board {
     private final int size;
@@ -20,9 +21,7 @@ public class Board {
         clean();
     }
 
-    public int size() {
-        return size;
-    }
+    public int size() { return size; }
 
     public final void clean() {
         for (int i = 0; i < size; i++) {
@@ -33,6 +32,7 @@ public class Board {
     }
 
     public void placeToken(int col, int row, Token token) {
+        Objects.requireNonNull(token);
         if (isValidPosition(col, row)) {
             grid[row][col] = token;
         }
