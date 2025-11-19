@@ -1,7 +1,6 @@
 package edu.io.player;
 
 import edu.io.token.*;
-
 import java.util.Objects;
 
 public class Player {
@@ -28,7 +27,6 @@ public class Player {
         switch (token) {
             case GoldToken goldToken -> {
                 vitals.dehydrate(VitalsValues.DEHYDRATION_GOLD);
-
                 Tool tool = shed.getTool();
                 double baseAmount = goldToken.amount();
 
@@ -47,12 +45,10 @@ public class Player {
                         });
             }
             case PickaxeToken pickaxeToken -> {
-                vitals.dehydrate(VitalsValues.DEHYDRATION_MOVE);
                 shed.add(pickaxeToken);
             }
             case AnvilToken anvilToken -> {
                 vitals.dehydrate(VitalsValues.DEHYDRATION_ANVIL);
-
                 Tool tool = shed.getTool();
                 if (tool instanceof Repairable repairableTool) {
                     repairableTool.repair();
@@ -60,9 +56,6 @@ public class Player {
             }
             case WaterToken waterToken -> {
                 vitals.hydrate(waterToken.amount());
-            }
-            case EmptyToken emptyToken -> {
-                vitals.dehydrate(VitalsValues.DEHYDRATION_MOVE);
             }
             default -> {
                 vitals.dehydrate(VitalsValues.DEHYDRATION_MOVE);
